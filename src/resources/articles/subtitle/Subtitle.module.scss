@@ -1,0 +1,28 @@
+@import '../../../Colors.scss';
+
+.article_subtitle {
+    font-size: 1rem;
+    display: flex;
+    line-height: 1em;
+
+    > * {
+        margin: 0.5em;
+    }
+}
+
+.avatar {
+    margin: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.author {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.article_date {
+    color: $text-grey;
+    margin: 0;
+    font-size: 0.8rem;
+}

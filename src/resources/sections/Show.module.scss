@@ -1,0 +1,59 @@
+@import "../../Colors.scss";
+
+.sections {
+    display: flex;
+
+    > * {
+        margin: 0;
+    }
+
+    ul {
+        padding: 0;
+    }
+}
+
+.sections_nav {
+    width: 180px;
+    background-color: $table-white;
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+
+    h2,button {
+        padding: 0.5rem 0px;
+        padding-left: 1.5rem;
+        font-size: 1rem;
+        background-color: transparent;
+        border: none;
+    }
+
+    li {
+        width: 100%;
+    }
+    
+    button {
+        //for ellipsis to work properly
+        display: block;
+        width: 180px;
+        overflow: hidden;
+
+        cursor: pointer;
+        padding: 0.5rem 0px;
+        padding-left: 1.5rem;
+        text-align: left;
+        color: $subnav-primary;
+        border-radius: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+
+    button:hover, button:active {
+        text-decoration: underline;
+    }
+
+    button:active, .active {
+        background-color: $subnav-primary;
+        color: white;
+    }
+}

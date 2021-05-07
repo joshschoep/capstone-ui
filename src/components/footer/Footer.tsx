@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Footer.module.scss';
 
 interface FooterNav {
     label: string,
@@ -8,21 +9,21 @@ interface FooterNav {
 export default function Footer() {
     return (
         <footer>
-            <nav>
+            <nav className={styles.navs}>
                 { navs.map(nav => {
                     return (
-                    <ul key={nav.label}>
+                    <ul key={nav.label} className={styles.nav_group}>
                         <h2>{ nav.label }</h2>
                         { nav.links.map(link => {
                             return <li key={link.name}><a href={link.href}>{link.name}</a></li>
-                        })}
+                        }) }
                     </ul>
                     )
-                })}
+                }) }
             </nav>
-            <span className="copyright">{ process.env.REACT_APP_COPYRIGHT_STATEMENT }</span>
+            <span className={styles.copyright}>{ process.env.REACT_APP_COPYRIGHT_STATEMENT }</span>
         </footer>
-    )
+    );
 }
 
 const navs: FooterNav[] = [
@@ -71,5 +72,5 @@ const navs: FooterNav[] = [
             {name: "Item 5.1", href: "#"},
             {name: "Item 5.2", href: "#"}
         ]
-    },
+    }
 ]

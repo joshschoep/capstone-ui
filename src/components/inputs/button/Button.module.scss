@@ -1,0 +1,20 @@
+@import '../../../Colors.scss';
+
+.button {
+    border-radius: 5px;
+    background-color: $button-background;
+    color: $button-text;
+    border: 1px solid $button-background-hover;
+    padding: 5px 12px;
+}
+
+.button:hover, .button:focus {
+    text-decoration: none;
+    background-color: $button-background-hover;
+}
+
+.button:active {
+    text-decoration: none;
+    color: $button-background;
+    background-color: $button-background-active;
+}

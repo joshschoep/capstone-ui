@@ -1,0 +1,24 @@
+@import '../../Colors.scss';
+
+.crumb {
+    color: $label-text;
+}
+
+.crumb:after {
+    content: "";
+    display: inline-block;
+    border-top: 1px solid $text-grey;
+    border-right: 1px solid $text-grey;
+    margin: 0px 0.75rem;
+    transform: rotate(45deg);
+    height: 0.5em;
+    width: 0.5em; 
+}
+
+.crumb:first-of-type {
+    padding-left: 1rem
+}
+
+.crumb:last-of-type:after {
+    display: none;
+}

@@ -1,0 +1,36 @@
+@import '../../Colors.scss';
+
+.centerpiece {
+    display: block;
+    background-color: white;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.error_logo,.error_text {
+    display: block;
+    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.error_text {
+    margin: auto;
+    font-size: 1.2em;
+
+    span {
+        display: inline-block;
+        padding: 8px;
+        border-right: 2px solid $table-border;
+        text-align: center;
+    }
+
+    span:first-child {
+        text-align: right;
+    }
+
+    span:last-child {
+        text-align: left;
+        border-right: none;
+    }
+}

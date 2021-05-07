@@ -1,0 +1,18 @@
+input[name="mobile"] {
+    max-width: 144px;
+}
+
+
+.save_and_notify {
+    button {
+        padding: 14px 64px;
+    }
+
+    label,button  {
+        display: inline-block;
+    }
+
+    label {
+        margin-left: 1em;
+    }
+}

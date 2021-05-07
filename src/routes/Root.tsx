@@ -1,10 +1,10 @@
 import React from 'react';
-import EmployeeTable from '../resources/employees/Table';
+import UserTable from '../resources/users/table/Table';
 
 export default function Root() {
     return (
         <main>
-            <EmployeeTable title="EMPLOYEES"/>
+            <UserTable title="EMPLOYEES"/>
         </main>
     );
 }

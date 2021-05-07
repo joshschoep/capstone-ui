@@ -1,0 +1,60 @@
+@import '../../../Colors.scss';
+
+.articles-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.news_article {
+    overflow: hidden; //so that floating images are incuded in height
+    display: block;
+    background-color: $table-white;
+    border: 2px solid $table-border;
+    border-radius: 2px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5em;
+    padding: 1rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+
+    h2 {
+        margin-top: 0.5em;
+        font-weight: bold;
+        color: $text-orange;
+        font-family: 'Georgia', 'Times New Roman', serif;
+    }
+
+    > a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .content, .thumbnail {
+        display: inline;
+    }
+}
+
+.thumbnail_before {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.thumbnail_after {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.news_article:first-of-type {
+    margin-top: none;
+}
+
+.news_article:last-of-type {
+    margin-bottom: none;
+}

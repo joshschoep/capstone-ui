@@ -1,32 +1,44 @@
 import axios from 'axios';
-import Employee from './Employee';
+import Article, { ArticlePage } from './Article';
+import Section from './Section';
+import User, { UserPage } from './User';
 
 export const api = axios.create({
     baseURL: process.env.REACT_APP_API_URL,
     withCredentials: true,
     headers: {
-        'Content-Type': 'application/json'
+        'Accept': 'application/json'
     }
-})
+});
+
+export const Sections = {
+    index: () => api.get<Section[]>(`sections`),
+    articles: (id: number, page: number) => api.get<ArticlePage>(`sections/${id}/articles?page=${page}`)
+}
 
 export const Articles = {
-    index: () => api.get(`/articles`),
-    get: (id: number) => api.get(`/articles/${id}`),
-
+    index: () => api.get<ArticlePage>(`/articles`),
+    get: (id: number) => api.get<Article>(`/articles/${id}`)
 }
 
-interface EmployeeIndexParams {
+interface UserIndexParams {
     filter: string;
-    sort: keyof Employee;
+    sort: keyof User;
     page: number;
 }
-export const Employees = {
-    index: (params: EmployeeIndexParams) => 
-        api.get(`/employees?page=${params.page}&sort=${params.sort}&filter=${params.filter}`),
-    get: (id: number) => api.get(`/employees/${id}`),
-
+export const Users = {
+    index: (params: UserIndexParams) =>
+        api.get<UserPage>(`/users?page=${params.page}&sort=${params.sort}&filter=${params.filter}`),
+    get: (id: number) => api.get<User>(`/users/${id}`),
+    post: (user: User) => api.post(`/users`, user),
+    put: (id: number, user: User) => api.put(`/users/${id}`, user),
+    delete: (id: number) => api.delete(`/users/${id}`)
 }
 
 export const Auth = {
-    user: () => api.get(`/user`),
+    user: () => api.get<User>(`/user`),
+    check: () => api.get(`/user/check`),
+    login: (email: string, password: string) => api.post(`/login`, {email, password}),
+    startSession: () => api.get(`/sanctum/csrf-cookie`),
+    logout: () => api.post(`/logout`).then(response => window.location.reload())
 }

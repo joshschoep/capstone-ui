@@ -1,0 +1,12 @@
+@import '../../Colors.scss';
+
+.no_content_header {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    background-color: $header-background;
+    width: 150px;
+}

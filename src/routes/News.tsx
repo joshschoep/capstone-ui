@@ -1,11 +1,8 @@
 import React from 'react';
-import './News.scss';
-import ArticlesIndex from '../resources/articles/Index';
+import ShowSections from '../resources/sections/Show';
 
 export default function News() {
     return (
-        <main>
-            <ArticlesIndex />
-        </main>
+        <ShowSections />
     )
 }

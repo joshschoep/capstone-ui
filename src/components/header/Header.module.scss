@@ -1,0 +1,63 @@
+@import "../../Colors.scss";
+
+header {
+    background-color: $header-background;
+    color: $header-text;
+
+    button {
+        font-size: 0.8em;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.logo {
+    width: 150px;
+}
+  
+.title_bar {
+    display: flex;
+    padding: 0.5rem;
+}
+
+.website_name {
+    font-weight: bold;
+    color: white;
+    margin: auto;
+}
+  
+.user {
+    margin: 0.5rem;
+    color: $user-text;
+}
+  
+.main_nav {
+    background-color: $nav-background;
+    color: $nav-text;
+    list-style: none;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+
+    > * {
+        display: inline-block;
+    }
+}
+
+.nav_button {
+    line-height: 1em;
+    display: inline-block;
+    padding: 16px 22px;
+    text-decoration: none;
+    color: $nav-text;
+}
+
+.nav_button:hover, .nav_button:focus {
+    color: $nav-text-hover;
+}
+
+.nav_button:active, .nav_button_active {
+    color: $nav-text-active;
+}
+
+.active {
+    font-weight: bold;
+}

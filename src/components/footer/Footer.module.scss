@@ -1,0 +1,40 @@
+@import "../../Colors.scss";
+
+footer {
+    background-color: $footer-background;
+    color: $footer-text;
+    overflow: hidden;
+    
+    h2 {
+        font-size: 16px;
+    }
+}
+
+.navs {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+
+    h2 {
+        margin-bottom: 0.75em;
+    }
+
+    li {
+        margin: 0.33em 0;
+    }
+}
+
+.nav_group {
+    list-style: none;
+    margin: 1em 1em;
+}
+
+.copyright {
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    background-color: $copyright-background;
+    color: $copright-text;
+}

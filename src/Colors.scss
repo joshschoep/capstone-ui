@@ -13,6 +13,7 @@ $table-white: #ffffff;
 $table-grey: #d6dadf;
 $table-border: #cccccc;
 
+$text-white: #ffffff;
 $text-gold: #ffd200;
 $text-darkened-gold: #ffbd00;
 $text-tan: #e69000;
@@ -36,17 +37,22 @@ $header-text: $text-light-grey;
 $user-text: $text-gold;
 
 $nav-background: $medium-bg-grey;
-$nav-text: $text-tan;
+$nav-text: $text-darkened-gold;
 $nav-text-hover: $text-darkened-gold;
-$nav-text-active: $text-grey;
+$nav-text-active: $text-light-green;
+
+$subnav-primary: $light-bg-teal;
 
 $link-text: $text-teal;
 $link-active-background: $text-teal;
 $link-active-text: $text-light-grey;
 
-$button-text: $text-light-grey;
+$button-text: $text-white;
 $button-background: $medium-bg-teal;
 $button-background-hover: $dark-bg-teal;
+$button-background-active: $dark-bg-grey;
+
+$label-text: $medium-bg-grey;
 
 $footer-background: $dark-bg-brown;
 $footer-text: $text-brown;

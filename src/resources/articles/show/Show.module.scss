@@ -1,0 +1,32 @@
+@import '../../../Colors.scss';
+
+.news_article {
+    margin: 1rem 2rem;
+}
+
+.article_headline {
+    margin-top: 0.5em;
+    font-weight: bold;
+    color: $primary-text;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.article_content {
+    line-height: 1.5em;
+}
+
+.thumbnail {
+    display: inline;
+}
+
+.thumbnail_before {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.thumbnail_after {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,94 @@
+@import './Colors.scss';
+
+.centerpiece {
+    margin: auto;
+    width: 100%;
+    max-width: 1440px;
+
+    h2 {
+        color: $label-text;
+        font-size: 1rem;
+    }
+}
+
+textarea {
+    font-family: sans-serif;
+}
+
+input[type="text"],input[type="email"],input[type="password"],textarea,.radiosection,select {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+input[type="text"],input[type="email"],input[type="password"],textarea,select {
+    padding-left:18px;
+    padding-right: 18px;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+
+select {
+
+}
+
+::placeholder {
+    opacity: 1;
+    color: $text-grey; 
+}
+
+input:focus,textarea:focus,select:focus {
+    outline: none;
+    border: 1px solid $secondary-background;
+    box-shadow: 
+        1px 0px $secondary-background, 
+        -1px 0px $secondary-background,
+        0px 1px $secondary-background,
+        0px -1px $secondary-background;
+}
+
+.radiosection {
+    span {
+        display: block;
+    }
+
+    > * {
+        display: block;
+    }
+
+    label {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+form {
+    margin: auto;
+    width: 95vw;
+    max-width: 450px;
+    padding: 2rem 0px;
+
+    input[type="text"],input[type="email"],input[type="password"],textarea,button,.radiosection,select {
+        margin-top: 0.25rem;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 1.5rem;
+
+        input[type="text"],input[type="email"],input[type="password"],textarea,select {
+            margin-right: 2rem;
+            box-sizing: border-box;
+            width: 100%;
+        }
+    }
+
+    .error_text {
+        color: red;
+    }
+
+    button:last-of-type {
+        // float: right;
+    }
+}
